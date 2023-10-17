@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@color/levender"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/daylist"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:background="#D3D3D3" />
+
+
+    <TextView
+        android:id="@+id/day_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:text="here is no day"
+        android:textColor="@color/saffron"
+        android:textSize="40dp" />
+
+    <RelativeLayout
+        android:id="@+id/addinfo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/container"
+        android:background="#E6E6FA">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/close"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/close" />
+
+        <Button
+            android:id="@+id/adddetails"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="#FF9800"
+            android:text="Completed"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Day:"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/currentday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/count"
+            android:text="16"
+            android:textColor="@color/saffron"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/todaydate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/count"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:text="To Day Date:"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/currentdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/count"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/todaydate"
+            android:text="09/09/2003"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/daycomplet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addinfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#FF9800"
+        android:text="Complete today"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/checktodo"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/daycomplet"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#FF9800"
+        android:text="Check Todo"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/todo"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/daycomplet"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/checktodo"
+        android:backgroundTint="#FF9800"
+        android:text="Create Todo"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/todo_list_add_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/addinfo"
+        android:background="@color/levender">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tudoaddlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/edittext"
+            />
+
+
+        <EditText
+            android:id="@+id/edittext"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_above="@id/addtudo"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/corner_radius" />
+
+        <Button
+            android:id="@+id/set"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_above="@id/addtudo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="7dp"
+            android:layout_toEndOf="@id/edittext"
+            android:backgroundTint="@color/saffron"
+            android:text="Set"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/addtudo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#FF9800"
+            android:text="Add"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Day :"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/daynumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/day"
+        android:text="16"
+        android:textColor="@color/saffron"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/day"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Date :"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/dateinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/daynumber"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/date"
+        android:text="09/09/2013"
+        android:textColor="@color/saffron"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/sudo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Sudo Status "
+        android:textSize="30dp" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/dateinfo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="19dp"
+        android:layout_toRightOf="@id/sudo"
+        android:src="@drawable/done" />
+
+    <TextView
+        android:id="@+id/notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sudo"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Notes :-"
+        android:textSize="30dp" />
+
+
+    <EditText
+        android:id="@+id/fname"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notes"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:hint="First Name"
+        android:maxLines="4"
+        android:text="the quick brown fox jumps on the lazy dog"
+        android:textSize="25dp" />
+
+
+</RelativeLayout>
