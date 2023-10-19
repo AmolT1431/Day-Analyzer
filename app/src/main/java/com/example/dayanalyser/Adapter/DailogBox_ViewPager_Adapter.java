@@ -12,21 +12,21 @@ import com.example.dayanalyser.Fragments.Fragment_DialogBox_info;
 import com.example.dayanalyser.Model.Day;
 
 public class DailogBox_ViewPager_Adapter extends FragmentPagerAdapter {
-String s;
-String date;
-Day day;
+String Position;
 
-    public DailogBox_ViewPager_Adapter(@NonNull FragmentManager fm,String s,Day day) {
+
+
+    public DailogBox_ViewPager_Adapter(@NonNull FragmentManager fm,String position) {
         super(fm);
-        this.s=s;
-        this.day=day;
+        this.Position=position;
+
     }
 
     @NonNull
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return new Fragment_DialogBox_info(s,day);
+            return new Fragment_DialogBox_info(Position);
         } else {
             return new Fragment_DialogBox_details();
         }

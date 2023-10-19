@@ -59,10 +59,13 @@ public class DayListAdapter extends RecyclerView.Adapter<DayListAdapter.ViewHold
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Intend created for starting detail activity
                 Intent intent = new Intent(context, Detail_Activity.class);
-                String s =Integer.toString(p);
-                String date=day.getDate();
-                intent.putExtra("date",date);
+                String s =Integer.toString(p+1); // passing position
+                String date=day.getDate(); // passing date
+
+
+                intent.putExtra("position",s);
                 context.startActivity(intent);
 
             }

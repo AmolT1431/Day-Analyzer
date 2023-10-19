@@ -36,11 +36,9 @@ public class Detail_Activity extends AppCompatActivity  {
         viewPager=(ViewPager) findViewById(R.id.viewpager);
         Intent intent=getIntent();
         String s=intent.getStringExtra("day_no");
-        Day day=new Day();
-        day=getIntent().getParcelableExtra("obj");
+       String posi=intent.getStringExtra("position");
 
-
-        dailogBoxViewPagerAdapter=new DailogBox_ViewPager_Adapter(getSupportFragmentManager(),s,day);
+        dailogBoxViewPagerAdapter=new DailogBox_ViewPager_Adapter(getSupportFragmentManager(),posi);
         viewPager.setAdapter(dailogBoxViewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
 
