@@ -35,7 +35,7 @@
     <RelativeLayout
         android:id="@+id/addinfo"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:layout_below="@id/container"
         android:background="#E6E6FA">
 
@@ -88,7 +88,7 @@
             android:layout_below="@id/count"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
-            android:text="To Day Date:"
+            android:text="TO Day Date:"
             android:textSize="25dp"
             android:textStyle="bold" />
 
@@ -101,7 +101,48 @@
             android:layout_marginTop="15dp"
             android:layout_toRightOf="@id/todaydate"
             android:text="09/09/2003"
-            android:textSize="20dp" />
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/sudo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/todaydate"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:text="Sudo"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/currentdate"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/sudo" />
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="note :"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_below="@id/sudo"
+            android:layout_marginLeft="30dp"
+           android:textColor="@color/green"
+            />
+        <EditText
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_above="@+id/adddetails"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="25dp"
+            android:lines="5"
+            android:gravity="top|start"
+            android:scrollbars="vertical"
+            />
 
 
     </RelativeLayout>
@@ -154,8 +195,10 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/tudoaddlist"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/edittext"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_above="@+id/edittext"
+
             />
 
 
